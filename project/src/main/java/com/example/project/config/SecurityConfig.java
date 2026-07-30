@@ -49,7 +49,8 @@ public class SecurityConfig {
         CorsConfiguration config = new CorsConfiguration();
         config.setAllowedOrigins(List.of(
     "http://localhost:5173",
-    "https://777-sage-gamma.vercel.app"
+     "https://777-sage-gamma.vercel.app",
+    "https://777-7e1bdo4rn-samantsaini2003-2927s-projects.vercel.app"
 ));   // React dev server
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
