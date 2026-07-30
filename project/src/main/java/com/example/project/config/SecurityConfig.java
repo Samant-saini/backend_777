@@ -32,6 +32,7 @@ public class SecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
             )
             .authorizeHttpRequests(auth -> auth
+                .requestMatchers(org.springframework.http.HttpMethod.OPTIONS, "/**").permitAll()
     .requestMatchers("/api/auth/**").permitAll()
     .requestMatchers("/api/health").permitAll()
     .requestMatchers("/api/adoptions/applications/*/approve").hasRole("ADMIN")
